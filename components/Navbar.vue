@@ -5,55 +5,46 @@
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="portfolioNavbar" @click="collapse()">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="portfolioNavbar" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item">
         Home
       </a>
 
       <a class="navbar-item">
-        Documentation
+        About me
+      </a>
+      <a class="navbar-item">
+        Projects
+      </a>
+      <a class="navbar-item">
+        Contact me
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
             <p class="share-text">Share to: </p>
-          <a class="button is-primary">
-            <strong>Sign up</strong>
+          <a class="button is-light">
+            Facebook
           </a>
           <a class="button is-light">
-            Log in
+            Twitter
+          </a>
+          <a class="button is-light">
+            WhatsApp
+          </a>
+          <a class="button is-light">
+            LinkedIn
           </a>
         </div>
       </div>
@@ -63,13 +54,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 export default Vue.extend({
+  methods: {
+    collapse() {
+      const hamburger: any = document.getElementById("portfolioNavbar");
+      hamburger.style.display = hamburger.style.display === "none" ? "block" : "none";
+    }
+  }
 });
 </script>
 <style lang="scss" scoped>
 .share-text {
-    margin-right: 1rem;
-    color: $brownish-grey;
+  margin-right: 1rem;
+  color: $brownish-grey;
 }
 </style>

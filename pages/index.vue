@@ -1,9 +1,6 @@
 <template>
   <div>
       <Navbar />
-      <h1 class="title">
-        phemmyhot-portfolio
-      </h1>
   </div>
 </template>
 
