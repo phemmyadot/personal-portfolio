@@ -70,5 +70,6 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .share-text {
     margin-right: 1rem;
+    color: $brownish-grey;
 }
 </style>
