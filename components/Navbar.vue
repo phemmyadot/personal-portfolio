@@ -33,18 +33,20 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-            <p class="share-text">Share to: </p>
-          <a class="button is-light">
-            Facebook
+          <a>
+            <img src="@/assets/images/facebook-logo.svg" alt="">
           </a>
-          <a class="button is-light">
-            Twitter
+          <a>
+            <img src="@/assets/images/instagram-logo.svg" alt="">
           </a>
-          <a class="button is-light">
-            WhatsApp
+          <a>
+            <img src="@/assets/images/twitter-logo.svg" alt="">
           </a>
-          <a class="button is-light">
-            LinkedIn
+          <a>
+            <img src="@/assets/images/linkedin.svg" alt="">
+          </a>
+          <a>
+            <img src="@/assets/images/youtube-logo.svg" alt="">
           </a>
         </div>
       </div>
@@ -58,8 +60,9 @@ import Vue from "vue";
 export default Vue.extend({
   methods: {
     collapse() {
-      const hamburger: any = document.getElementById("portfolioNavbar");
-      hamburger.style.display = hamburger.style.display === "none" ? "block" : "none";
+      const hamburger: any = document.getElementById("portfolioNavbar")?.classList;
+      const elClass = hamburger.length <= 1 ? hamburger.add('expand') : hamburger.remove('expand');
+      ;
     }
   }
 });
@@ -68,5 +71,20 @@ export default Vue.extend({
 .share-text {
   margin-right: 1rem;
   color: $brownish-grey;
+}
+.buttons {
+  a {
+    display: flex;
+    margin: 0 0.5rem;
+    img {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
+}
+@include media-sm {
+  .expand {
+    display: block;
+  }
 }
 </style>
