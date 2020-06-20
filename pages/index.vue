@@ -1,18 +1,22 @@
 <template>
   <div>
-      <Navbar />
+      <app-nav-bar></app-nav-bar>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Navbar } from "@/components";
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import { NavBar } from "@/components";
+import "reflect-metadata";
 
-export default Vue.extend({
+@Component({
   components: {
-    Navbar
+    appNavBar: NavBar
   }
-});
+})
+export default class YourComponent extends Vue {
+  // @Prop(Number) readonly propA: number | undefined
+}
 </script>
 
 <style lang="scss" scoped>

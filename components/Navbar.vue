@@ -56,16 +56,17 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  methods: {
-    collapse() {
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component
+export default class NavBar extends Vue {
+  // @Prop(Number) readonly propA: number | undefined
+  collapse() {
       const hamburger: any = document.getElementById("portfolioNavbar")?.classList;
       const elClass = hamburger.length <= 1 ? hamburger.add('expand') : hamburger.remove('expand');
       ;
     }
-  }
-});
+}
 </script>
 <style lang="scss" scoped>
 .share-text {
