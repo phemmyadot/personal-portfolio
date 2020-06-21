@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__container">
     <div class="header__container__content">
-        <no-ssr>
+        <client-only>
           <vue-typer
             :text='["I AM BABAFEMI","I AM A SOFTWARE DEVELOPER"]'
             :repeat='Infinity'
@@ -16,7 +16,7 @@
             :erase-on-complete='false'
             caret-animation='blink'
           ></vue-typer>
-        </no-ssr>
+        </client-only>
         <div class="header__container__content__download-button">
           <button id="download" class="button" @click="download">Download CV</button>
         </div>
@@ -39,7 +39,8 @@ export default class Header extends Vue {
   start() {
     this.$confetti.start({
       defaultSize: 1,
-      defaultDropRate: 3
+      defaultDropRate: 10,
+      particlesPerFrame: 20
     });
   }
 
