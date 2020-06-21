@@ -64,7 +64,6 @@ export default class NavBar extends Vue {
   collapse() {
       const hamburger: any = document.getElementById("portfolioNavbar")?.classList;
       const elClass = hamburger.length <= 1 ? hamburger.add('expand') : hamburger.remove('expand');
-      ;
     }
 }
 </script>

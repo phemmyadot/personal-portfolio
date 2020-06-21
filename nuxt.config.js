@@ -29,7 +29,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/vue-confetti.ts', mode: 'client' },
+    {src: '~/plugins/vue-typer.ts', ssr: false}
+  ],
   /*
    ** Nuxt.js dev-modules
    */
