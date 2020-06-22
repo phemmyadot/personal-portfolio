@@ -18,7 +18,7 @@
           ></vue-typer>
         </client-only>
         <div class="header__container__content__download-button">
-          <button id="download" class="button" @click="download">Download CV</button>
+            <button id="download" class="button" @click="download">Download CV</button>
         </div>
     </div>
     <img src="@/assets/images/background.png" class="header__image" alt="header iamge">
@@ -28,6 +28,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
+import axios from "axios";
 @Component({
   components: {}
 })
@@ -47,7 +48,15 @@ export default class Header extends Vue {
   download() {
     const download: any = document.getElementById("download")?.classList;
     download.add("is-loading");
-    setTimeout(() => download.remove("is-loading"), 2000);
+    setTimeout(() => download.remove("is-loading"), 500);
+    axios.get("./../assets/resume.pdf").then(response => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "Babafemi Resume.pdf");
+      document.body.appendChild(link);
+      link.click();
+    });
   }
 }
 </script>
@@ -77,6 +86,9 @@ export default class Header extends Vue {
           background-color: $primary;
           border-color: transparent;
           color: #fff;
+          &:hover, &:focus {
+            color: #fff;
+          }
         }
       }
     }
