@@ -36,7 +36,7 @@ module.exports = {
       {
         hid: "og:image",
         name: "og:image",
-        content: "/assets/images/background.png" || ""
+        content: '/static/ogImage.png' || ""
       },
       {
         hid: "twitter:card",
