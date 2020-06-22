@@ -32,18 +32,22 @@
     </button>
     <app-nav-bar></app-nav-bar>
     <app-header></app-header>
+    <app-about-me></app-about-me>
+    <app-services></app-services>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { NavBar, Header } from "@/components";
+import { NavBar, Header, Services, AboutMe } from "@/components";
 import "reflect-metadata";
 
 @Component({
   components: {
     appNavBar: NavBar,
-    appHeader: Header
+    appHeader: Header,
+    appServices: Services,
+    appAboutMe: AboutMe
   }
 })
 export default class App extends Vue {
@@ -72,6 +76,7 @@ export default class App extends Vue {
   border: 1px solid var(--bg-secondary);
   background-color: var(--bg-secondary);
   box-shadow: var(--bg-secondary) 1px 1px 1px;
+  z-index: 9999;
   &:focus {
     outline: none;
     box-shadow: var(--bg-secondary) 1px 1px 1px;

@@ -1,29 +1,44 @@
 <template>
   <div class="header">
     <div class="header__container">
-    <div class="header__container__content">
+      <div class="header__container__content">
         <client-only>
           <vue-typer
-            :text='["I AM BABAFEMI","SOFTWARE DEVELOPER","CREATIVE THINKER","PASSIONATE","TEAM PLAYER"]'
-            :repeat='Infinity'
-            :shuffle='false'
-            initial-action='typing'
-            :pre-type-delay='70'
-            :type-delay='70'
-            :pre-erase-delay='4000'
-            :erase-delay='250'
-            erase-style='select-all'
-            :erase-on-complete='false'
-            caret-animation='blink'
+            :text="[
+              'I AM BABAFEMI',
+              'SOFTWARE DEVELOPER',
+              'CREATIVE THINKER',
+              'PASSIONATE',
+              'TEAM PLAYER'
+            ]"
+            :repeat="Infinity"
+            :shuffle="false"
+            initial-action="typing"
+            :pre-type-delay="70"
+            :type-delay="70"
+            :pre-erase-delay="4000"
+            :erase-delay="250"
+            erase-style="select-all"
+            :erase-on-complete="false"
+            caret-animation="blink"
           ></vue-typer>
         </client-only>
         <div class="header__container__content__download-button">
-            <a target="_blank" href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open">
-              <button id="download" class="button" @click="download">View Resume</button>
-            </a>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open"
+          >
+            <button id="download" class="button" @click="download">
+              View Resume
+            </button>
+          </a>
         </div>
-    </div>
-    <img src="@/assets/images/background.png" class="header__image" alt="header iamge">
+      </div>
+      <img
+        src="@/assets/images/background.png"
+        class="header__image"
+        alt="header iamge"
+      />
     </div>
   </div>
 </template>
@@ -54,7 +69,7 @@ export default class Header extends Vue {
   }
 }
 </script>
-<style lang="scss" >
+<style lang="scss">
 .header {
   height: calc(100vh - 3.25rem);
   &__image {
@@ -80,7 +95,8 @@ export default class Header extends Vue {
           background-color: var(--color-primary);
           border-color: transparent;
           color: var(--color-secondary);
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: var(--color-secondary);
           }
         }
@@ -92,11 +108,11 @@ export default class Header extends Vue {
 @include tablet-portrait {
   .header {
     &__image {
-      position: relative;
       top: auto;
       margin-top: 0;
       right: 0;
       width: 100vw;
+      bottom: 0;
     }
     &__container {
       &__content {
