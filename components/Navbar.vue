@@ -1,88 +1,176 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="">
-      <img src="@/assets/images/logo.png" width="112" height="28">
-    </a>
-
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="portfolioNavbar" @click="collapse()">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="portfolioNavbar" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="@/assets/images/logo.png" width="112" height="28" />
       </a>
 
-      <a class="navbar-item">
-        About me
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="portfolioNavbar"
+        @click="collapse()"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-      <a class="navbar-item">
-        Projects
-      </a>
-      <a class="navbar-item">
-        Contact me
-      </a>
-
     </div>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a>
-            <img src="@/assets/images/facebook-logo.svg" alt="">
-          </a>
-          <a>
-            <img src="@/assets/images/instagram-logo.svg" alt="">
-          </a>
-          <a>
-            <img src="@/assets/images/twitter-logo.svg" alt="">
-          </a>
-          <a>
-            <img src="@/assets/images/linkedin.svg" alt="">
-          </a>
-          <a>
-            <img src="@/assets/images/youtube-logo.svg" alt="">
-          </a>
+    <div id="portfolioNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          About me
+        </a>
+        <a class="navbar-item">
+          Projects
+        </a>
+        <a class="navbar-item">
+          Contact me
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17.73"
+                height="17.73"
+                viewBox="0 0 17.73 17.73"
+              >
+                <defs></defs>
+                <path
+                  class="icon"
+                  d="M17.73,2.955A3.063,3.063,0,0,0,14.775,0H2.955A3.063,3.063,0,0,0,0,2.955v11.82A3.063,3.063,0,0,0,2.955,17.73h5.91v-6.7H6.7V8.077H8.865V6.926a3.636,3.636,0,0,1,3.324-3.774h2.389V6.107H12.189c-.261,0-.566.317-.566.793V8.077h2.955v2.955H11.623v6.7h3.152a3.063,3.063,0,0,0,2.955-2.955Z"
+                  transform="translate(0 0)"
+                />
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17.729"
+                height="17.729"
+                viewBox="0 0 17.729 17.729"
+              >
+                <defs></defs>
+                <path
+                  class="icon"
+                  d="M12.836,0H4.892A4.9,4.9,0,0,0,0,4.893v7.944a4.9,4.9,0,0,0,4.892,4.893h7.944a4.9,4.9,0,0,0,4.893-4.893V4.893A4.9,4.9,0,0,0,12.836,0Zm3.32,12.836a3.323,3.323,0,0,1-3.32,3.32H4.892a3.323,3.323,0,0,1-3.319-3.32V4.893a3.323,3.323,0,0,1,3.319-3.32h7.944a3.323,3.323,0,0,1,3.32,3.32v7.944Z"
+                />
+                <path
+                  class="icon"
+                  d="M45.536,40.97A4.568,4.568,0,1,0,50.1,45.538,4.573,4.573,0,0,0,45.536,40.97Zm0,7.563a3,3,0,1,1,3-3A3,3,0,0,1,45.536,48.533Z"
+                  transform="translate(-36.672 -36.674)"
+                />
+                <path
+                  class="icon"
+                  d="M120.075,28.251a1.153,1.153,0,1,0,.816.338A1.158,1.158,0,0,0,120.075,28.251Z"
+                  transform="translate(-106.45 -25.288)"
+                />
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22.443"
+                height="17.73"
+                viewBox="0 0 22.443 17.73"
+              >
+                <defs></defs>
+                <path
+                  class="icon"
+                  d="M19.9,74.788a2.713,2.713,0,0,0,2.445-1.668,3.557,3.557,0,0,1-2.646.337c-.038-.21-.081-.41-.123-.59-.594-2.5-2.628-4.516-4.758-4.273.172-.08.347-.154.522-.221.235-.1,1.611-.353,1.394-.91-.183-.49-1.864.37-2.18.483.418-.18,1.109-.49,1.183-1.041a3.177,3.177,0,0,0-1.754.953,1.466,1.466,0,0,0,.337-.764c-1.708,1.251-2.705,3.773-3.512,6.22a8.677,8.677,0,0,0-1.7-1.567,41.7,41.7,0,0,0-5.758-2.906,3.562,3.562,0,0,0,1.92,3.236,4.13,4.13,0,0,0-1.382.19A3.017,3.017,0,0,0,6.4,74.83a1.931,1.931,0,0,0-1.538.7,2.544,2.544,0,0,0,2.763,1.553c-1.722.851-.7,2.428.7,2.193A5.424,5.424,0,0,1,0,79.527c5.651,8.83,17.935,5.222,19.765-3.283a3.192,3.192,0,0,0,2.678-1.16A4.809,4.809,0,0,1,19.9,74.788Z"
+                  transform="translate(0 -66.906)"
+                />
+              </svg>
+            </a>
+            <a>
+              <svg
+                id="Bold"
+                enable-background="new 0 0 24 24"
+                height="17.73"
+                viewBox="0 0 24 24"
+                width="17.73"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="icon"
+                  d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"
+                />
+                <path class="icon" d="m.396 7.977h4.976v16.023h-4.976z" />
+                <path
+                  class="icon"
+                  d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"
+                />
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14.775"
+                height="17.73"
+                viewBox="0 0 14.775 17.73"
+              >
+                <defs></defs>
+                <path
+                  class="icon"
+                  d="M20,12.969h-.973l0-.565a.459.459,0,0,1,.458-.457h.062a.459.459,0,0,1,.459.457Zm-3.65-1.211a.416.416,0,0,0-.449.369v2.749a.458.458,0,0,0,.9,0V12.127A.416.416,0,0,0,16.348,11.758Zm5.927-1.538v5.229a2.359,2.359,0,0,1-2.417,2.281H9.917A2.359,2.359,0,0,1,7.5,15.449V10.22A2.359,2.359,0,0,1,9.917,7.939h9.94A2.359,2.359,0,0,1,22.275,10.22Zm-11.695,5.8V10.509h1.232V9.693l-3.285,0v.8l1.025,0v5.524Zm3.694-4.688H13.247v2.941a5.213,5.213,0,0,1,0,.713c-.084.228-.459.47-.605.025a5.853,5.853,0,0,1,0-.718l0-2.962H11.611l0,2.915c0,.447-.01.78,0,.932.025.267.016.579.264.757a1.241,1.241,0,0,0,1.57-.526l0,.607h.825V11.329ZM17.561,14.7l0-2.448c0-.933-.7-1.492-1.646-.737l0-1.82-1.026,0,0,6.282.844-.012.077-.391C16.884,16.562,17.562,15.884,17.561,14.7Zm3.215-.324-.77,0c0,.031,0,.066,0,.1v.43a.421.421,0,0,1-.421.417h-.151a.421.421,0,0,1-.421-.417V13.781h1.764v-.664a10.474,10.474,0,0,0-.053-1.248c-.126-.877-1.358-1.017-1.98-.568a1.16,1.16,0,0,0-.431.58,3.266,3.266,0,0,0-.131,1.035v1.46C18.18,16.8,21.128,16.46,20.776,14.373ZM16.825,6.448a.7.7,0,0,0,.247.312.716.716,0,0,0,.42.117.654.654,0,0,0,.394-.123.944.944,0,0,0,.288-.369l-.02.4H19.3V1.919h-.9v3.79a.375.375,0,0,1-.751,0V1.919h-.941V5.2c0,.418.008.7.02.839A1.412,1.412,0,0,0,16.825,6.448ZM13.354,3.7a4.053,4.053,0,0,1,.116-1.1,1.172,1.172,0,0,1,1.2-.872,1.42,1.42,0,0,1,.681.154,1.135,1.135,0,0,1,.439.4A1.576,1.576,0,0,1,16,2.791a4.044,4.044,0,0,1,.057.8V4.82a6.667,6.667,0,0,1-.053,1,1.577,1.577,0,0,1-.226.592,1.07,1.07,0,0,1-.441.405,1.406,1.406,0,0,1-.621.131,1.726,1.726,0,0,1-.662-.111.909.909,0,0,1-.422-.338,1.5,1.5,0,0,1-.215-.546,5.262,5.262,0,0,1-.064-.96V3.7Zm.9,1.935a.457.457,0,1,0,.91,0V3.04a.457.457,0,1,0-.91,0ZM11.082,6.941h1.08V3.206L13.44.007H12.258L11.58,2.383,10.891,0H9.722L11.08,3.208Z"
+                  transform="translate(-7.5)"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class NavBar extends Vue {
   // @Prop(Number) readonly propA: number | undefined
   collapse() {
-      const hamburger: any = document.getElementById("portfolioNavbar")?.classList;
-      const elClass = hamburger.length <= 1 ? hamburger.add('expand') : hamburger.remove('expand');
-    }
+    const hamburger: any = document.getElementById("portfolioNavbar")
+      ?.classList;
+    const elClass =
+      hamburger.length <= 1
+        ? hamburger.add("expand")
+        : hamburger.remove("expand");
+  }
 }
 </script>
 <style lang="scss" scoped>
-.share-text {
-  margin-right: 1rem;
-  color: $brownish-grey;
-}
 .buttons {
   a {
     display: flex;
     margin: 0 0.5rem;
-    img {
-      width: 1.125rem;
-      height: 1.125rem;
+    .icon {
+      fill: var(--bg-secondary);
     }
   }
 }
+.navbar {
+  background-color: transparent;
+  box-shadow: var(--color-primary) 1px 1px 1px;
+}
 @include media-sm {
+  .expand {
+    display: block;
+  }
+}
+@include media-xs {
   .expand {
     display: block;
   }

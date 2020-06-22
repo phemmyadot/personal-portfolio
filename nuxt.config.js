@@ -76,7 +76,7 @@ module.exports = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build","@nuxtjs/color-mode"],
   /*
    ** Nuxt.js modules
    */

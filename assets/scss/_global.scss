@@ -2,10 +2,64 @@
 @import "./variables";
 @import "./typography";
 
-html, body, button, input, select, textarea, p, a, button {
-    font-family: "latoRegular";
-    font-size: 16px;
+html,
+body,
+button,
+input,
+select,
+textarea,
+p,
+a,
+button {
+  font-family: "latoRegular";
+  font-size: 16px;
 }
-h1, h2, h3, h4, h5, h6, strong {
-    font-family: "latoBold";
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "latoBold";
+}
+
+:root {
+  --color: #f3f5f4;
+  --color-primary: #091a28;
+  --color-secondary: #f3f5f4;
+  --bg: #f3f5f4;
+  --bg-secondary: #091a28;
+  --border-color: #ddd;
+}
+
+.dark-mode {
+  --color: #091a28;
+  --color-primary: #f3f5f4;
+  --color-secondary: #091a28;
+  --bg: #091a28;
+  --bg-secondary: #f3f5f4;
+  --border-color: #0d2538;
+}
+
+body {
+  font-family: "latoRegular";
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary);
+  opacity: 0.8;
+  background-color: transparent;
 }

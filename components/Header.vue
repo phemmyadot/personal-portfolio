@@ -77,11 +77,11 @@ export default class Header extends Vue {
         margin-top: 3rem;
         button {
           font-size: 0.895rem;
-          background-color: $primary;
+          background-color: var(--color-primary);
           border-color: transparent;
-          color: #fff;
+          color: var(--color-secondary);
           &:hover, &:focus {
-            color: #fff;
+            color: var(--color-secondary);
           }
         }
       }
@@ -125,20 +125,20 @@ export default class Header extends Vue {
   font-size: 1.25rem;
 }
 .vue-typer .custom.char.typed {
-  color: $primary;
+  color: var(--color-primary);
 }
 .vue-typer .custom.char.selected {
-  color: $tertiary;
+  color: var(--color-secondary);
 }
 
 .vue-typer .custom.caret {
   animation: rocking 1s ease-in-out 0s infinite;
 }
 .vue-typer .custom.caret.typing {
-  background-color: #009688;
+  background-color: var(--color-secondary);
 }
 .vue-typer .custom.caret.selecting {
   display: inline-block;
-  background-color: $primary;
+  background-color: var(--color-primary);
 }
 </style>
