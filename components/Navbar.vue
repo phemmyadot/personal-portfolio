@@ -168,11 +168,15 @@ export default class NavBar extends Vue {
 @include media-sm {
   .expand {
     display: block;
+    position: absolute;
+    width: 100%;
   }
 }
 @include media-xs {
   .expand {
     display: block;
+    position: absolute;
+    width: 100%;
   }
 }
 </style>
