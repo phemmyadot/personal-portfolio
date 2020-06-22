@@ -33,7 +33,7 @@
     <app-nav-bar></app-nav-bar>
     <app-header></app-header>
     <app-about-me></app-about-me>
-    <app-services></app-services>
+    <!-- <app-services></app-services> -->
   </div>
 </template>
 

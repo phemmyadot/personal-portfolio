@@ -16,9 +16,18 @@
           <strong>creative thinker</strong> and a
           <strong>pragmatic problem solver.</strong>
           <ul class="about-me__description__contact">
-            <li><strong>Email:</strong><a href="mailto:Phemmylekan@gmail.com"> Phemmylekan@gmail.com</a></li>
-            <li><strong>Mobile:</strong><a href="tel: +2449065195264"></a> +234 906 5195 264</li>
-            <li><strong>Address:</strong> 106 Victoria Street, Ojota, Lagos, Nigeria</li>
+            <li>
+              <strong>Email:</strong
+              ><a href="mailto:Phemmylekan@gmail.com"> Phemmylekan@gmail.com</a>
+            </li>
+            <li>
+              <strong>Mobile:</strong><a href="tel: +2449065195264"></a> +234
+              906 5195 264
+            </li>
+            <li>
+              <strong>Address:</strong> 106 Victoria Street, Ojota, Lagos,
+              Nigeria
+            </li>
           </ul>
         </span>
         <div class="about-me__education">
@@ -26,11 +35,89 @@
             <li><strong>Eduaction</strong></li>
             <li>Kwame Nkruhma University of Science and Technology.</li>
             <li>BSc Information Technology</li>
-            <br>
+            <br />
             <li><strong>Certification</strong></li>
             <li>Introduction to Java Programming</li>
             <li>Triton College</li>
-          </ul></div>
+          </ul>
+        </div>
+      </div>
+      <div class="technologies">
+      <strong>Technologies</strong>
+        <div class="technologies__icons">
+            <div class="technologies__icons__icon">
+          <img src="@/assets/images/javascript.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/typescript.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/angular.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/vue-js.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/nuxt.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/ionic.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/nodejs.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/graphql.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/mongodb.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/html-5.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/css3.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/sass.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/bootstrap.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/material-ui.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/bulma.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/npm.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/npm.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/git.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/jira.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/github.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/bitbucket.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/azure.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/netlify.svg" alt="" />
+        </div>
+        <div class="technologies__icons__icon">
+          <img src="@/assets/images/heroku.svg" alt="" />
+        </div>
+        </div>
       </div>
     </div>
   </section>
@@ -64,6 +151,24 @@ strong {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
 }
+.technologies {
+    margin-top: 1rem;
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    &__icon {
+      flex-basis: 8%;
+      height: 4rem;
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
 @include media-sm {
   .about-me {
     &__description {
@@ -87,6 +192,15 @@ strong {
     }
     &__education {
       margin-top: 1rem;
+    }
+  }
+  .technologies {
+    &__icons {
+      display: flex;
+      flex-wrap: wrap;
+      &__icon {
+        height: 2rem;
+      }
     }
   }
 }

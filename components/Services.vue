@@ -1,10 +1,10 @@
 <template>
     <section class="section">
-    <div class="container">
+    <div class="container services">
       <h1 class="title">Services</h1>
-      <h2 class="subtitle">
-        <!-- A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading -->
-      </h2>
+      <!-- <h2 class="subtitle">
+        description
+      </h2> -->
     </div>
   </section>
 </template>
@@ -12,9 +12,7 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
-export default class Services extends Vue {
-    
-}
+export default class Services extends Vue {}
 </script>
 <style lang="scss" scoped>
 
