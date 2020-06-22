@@ -4,15 +4,55 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Babafemi's Portfolio" || "",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: "My personal Portfolio" || ""
+      },
+      {
+        hid: "og:url",
+        name: "og:url",
+        content: "https://babafemi-portfolio.netlify.app/" || ""
+      },
+      {
+        hid: "og:type",
+        name: "og:type",
+        content: "website" || ""
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "Babafemi's Portfolio" || ""
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "My personal Portfolio" || ""
+      },
+      {
+        hid: "og:image",
+        name: "og:image",
+        content: "/assets/images/background.png" || ""
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary" || ""
+      },
+      {
+        hid: "twitter:site",
+        name: "twitter:site",
+        content: "@femiadot" || ""
+      },
+      {
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@femiadot" || ""
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },

@@ -4,7 +4,7 @@
     <div class="header__container__content">
         <client-only>
           <vue-typer
-            :text='["I AM BABAFEMI","I AM A SOFTWARE DEVELOPER"]'
+            :text='["I AM BABAFEMI","SOFTWARE DEVELOPER","CREATIVE THINKER","PASSIONATE","TEAM PLAYER"]'
             :repeat='Infinity'
             :shuffle='false'
             initial-action='typing'
@@ -18,7 +18,9 @@
           ></vue-typer>
         </client-only>
         <div class="header__container__content__download-button">
-            <button id="download" class="button" @click="download">Download CV</button>
+            <a target="_blank" href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open">
+              <button id="download" class="button" @click="download">View Resume</button>
+            </a>
         </div>
     </div>
     <img src="@/assets/images/background.png" class="header__image" alt="header iamge">
@@ -48,15 +50,7 @@ export default class Header extends Vue {
   download() {
     const download: any = document.getElementById("download")?.classList;
     download.add("is-loading");
-    setTimeout(() => download.remove("is-loading"), 500);
-    axios.get("./../assets/resume.pdf").then(response => {
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", "Babafemi Resume.pdf");
-      document.body.appendChild(link);
-      link.click();
-    });
+    setTimeout(() => download.remove("is-loading"), 200);
   }
 }
 </script>

@@ -18,7 +18,6 @@ import "reflect-metadata";
   }
 })
 export default class App extends Vue {
-  // @Prop(Number) readonly propA: number | undefined
 }
 </script>
 
