@@ -1,5 +1,5 @@
 <template>
-  <section class="header">
+  <section class="header" id="header">
     <div class="header__container">
       <div class="header__container__content">
         <client-only>
@@ -28,7 +28,7 @@
             target="_blank"
             href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open"
           >
-            <button id="download" class="button" @click="download">
+            <button id="download" class="header__container__content__download-button__button button is-rounded">
               View Resume
             </button>
           </a>
@@ -61,12 +61,6 @@ export default class Header extends Vue {
       particlesPerFrame: 20
     });
   }
-
-  download() {
-    const download: any = document.getElementById("download")?.classList;
-    download.add("is-loading");
-    setTimeout(() => download.remove("is-loading"), 200);
-  }
 }
 </script>
 <style lang="scss">
@@ -91,11 +85,12 @@ export default class Header extends Vue {
       flex-direction: column;
       &__download-button {
         margin-top: 3rem;
-        button {
+        &__button {
           font-size: 0.895rem;
           background-color: var(--color-primary);
           border-color: transparent;
           color: var(--color-secondary);
+          border-radius: 10%;
           &:hover,
           &:focus {
             color: var(--color-secondary);

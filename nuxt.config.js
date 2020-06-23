@@ -71,6 +71,7 @@ module.exports = {
    */
   plugins: [
     { src: '~/plugins/vue-confetti.ts', mode: 'client' },
+    { src: '~/plugins/vue-scroll-to.ts', mode: 'client' },
     {src: '~/plugins/vue-typer.ts', ssr: false}
   ],
   /*
@@ -83,7 +84,8 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     "@nuxtjs/bulma",
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'vue-scrollto/nuxt',
   ],
   /*
    ** Build configuration

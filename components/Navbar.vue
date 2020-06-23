@@ -11,7 +11,7 @@
         aria-label="menu"
         aria-expanded="false"
         data-target="portfolioNavbar"
-        @click="collapse()"
+        @click.prevent="collapse()"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -21,17 +21,20 @@
 
     <div id="portfolioNavbar" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#header'" @click.prevent="collapse()">
           Home
         </a>
 
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#aboutMe'" @click.prevent="collapse()">
           About me
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#services'" @click.prevent="collapse()">
+          Services
+        </a>
+        <a class="navbar-item" v-scroll-to="'#'" @click.prevent="collapse()">
           Projects
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#'" @click.prevent="collapse()">
           Contact me
         </a>
       </div>
@@ -178,8 +181,10 @@ export default class NavBar extends Vue {
   }
 }
 .navbar {
-  background-color: transparent;
   box-shadow: var(--color-primary) 1px 1px 1px;
+  position: fixed;
+  width: 100%;
+  background: var(--bg);
 }
 @include media-sm {
   .expand {
