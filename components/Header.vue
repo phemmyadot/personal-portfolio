@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <section class="header">
     <div class="header__container">
       <div class="header__container__content">
         <client-only>
@@ -40,7 +40,7 @@
         alt="header iamge"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -81,6 +81,7 @@ export default class Header extends Vue {
   }
   &__container {
     height: 100%;
+    position: relative;
     &__content {
       width: 50%;
       height: 100%;
