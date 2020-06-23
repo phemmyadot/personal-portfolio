@@ -95,23 +95,6 @@ import "reflect-metadata";
   }
 })
 export default class App extends Vue {
-  created() {
-    console.log(this.$colorMode.preference);
-  }
-  isDarkMode = false;
-  addDarkTheme(rootEl) {
-    rootEl.classList.remove("light-mode");
-    rootEl.classList.add("dark-mode");
-  }
-  removeDarkTheme(rootEl) {
-    rootEl.classList.remove("dark-mode");
-    rootEl.classList.add("light-mode");
-  }
-  changeColorMode() {
-    let rootEl = document.querySelector("html");
-    this.isDarkMode = !this.isDarkMode;
-    this.isDarkMode ? this.addDarkTheme(rootEl) : this.removeDarkTheme(rootEl);
-  }
 }
 </script>
 
