@@ -125,3 +125,9 @@ export default class IconMobile extends Vue {
   @Prop() iconColor: string;
 }
 </script>
+
+<style lang="scss" scoped>
+.icon {
+  fill: var(--bg-secondary);
+}
+</style>

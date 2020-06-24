@@ -30,3 +30,9 @@ export default class IconMail extends Vue {
   @Prop() iconColor: string;
 }
 </script>
+
+<style lang="scss" scoped>
+.icon {
+  fill: var(--bg-secondary);
+}
+</style>

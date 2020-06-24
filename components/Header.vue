@@ -4,13 +4,7 @@
       <div class="header__container__content">
         <client-only>
           <vue-typer
-            :text="[
-              'I AM BABAFEMI',
-              'SOFTWARE DEVELOPER',
-              'CREATIVE THINKER',
-              'PASSIONATE',
-              'TEAM PLAYER'
-            ]"
+            :text="introduction"
             :repeat="Infinity"
             :shuffle="false"
             initial-action="typing"
@@ -50,6 +44,13 @@ import axios from "axios";
   components: {}
 })
 export default class Header extends Vue {
+  introduction = [
+    "I AM BABAFEMI",
+    "SOFTWARE DEVELOPER",
+    "CREATIVE THINKER",
+    "PASSIONATE",
+    "TEAM PLAYER"
+  ];
   mounted() {
     this.start();
   }
