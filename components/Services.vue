@@ -72,16 +72,17 @@ export default class Services extends Vue {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 2rem;
     &__card {
-      background-color: var(--bg-secondary);
+      box-shadow: var(--box-shadow);
+      background-color: var(--bg);
       &__header {
-        box-shadow: 0 0.125em 0.25em var(--bg);
+        box-shadow: var(--box-shadow);
         &__title {
-          color: var(--color-secondary) !important;
+          color: var(--color-primary) !important;
         }
       }
       &__body {
         &__content {
-          color: var(--color-secondary) !important;
+          color: var(--color-primary) !important;
         }
       }
     }
