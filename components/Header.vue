@@ -22,17 +22,14 @@
             target="_blank"
             href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open"
           >
-            <button id="download" class="header__container__content__download-button__button button is-rounded">
-              View Resume
-            </button>
+            <button
+              id="download"
+              class="header__container__content__download-button__button button is-rounded"
+            >View Resume</button>
           </a>
         </div>
       </div>
-      <img
-        src="@/assets/images/background.png"
-        class="header__image"
-        alt="header iamge"
-      />
+      <img src="@/assets/images/background.png" class="header__image" alt="header iamge" />
     </div>
   </section>
 </template>

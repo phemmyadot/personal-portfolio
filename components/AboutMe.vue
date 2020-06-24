@@ -4,43 +4,36 @@
       <h1 class="title">About me</h1>
       <div class="about-me">
         <figure class="image about-me__avatar">
-          <img src="@/assets/images/avatar.jpg" alt="" />
+          <img src="@/assets/images/avatar.jpg" alt />
         </figure>
         <span class="about-me__description">
           <span v-html="description"></span>
           <ul class="about-me__description__contact">
             <strong>Contact:</strong>
             <li>
-              <icon-mail :width="25" :height="25" iconName="mail"
-                ><icon-mail
-              /></icon-mail>
-              <a href="mailto:Phemmylekan@gmail.com"> Phemmylekan@gmail.com</a>
+              <icon-mail :width="25" :height="25" iconName="mail"></icon-mail>
+              <a href="mailto:Phemmylekan@gmail.com">Phemmylekan@gmail.com</a>
             </li>
             <li>
-              <icon-mobile
-                :width="25"
-                :height="25"
-                iconName="mobile"
-              ></icon-mobile>
+              <icon-mobile :width="25" :height="25" iconName="mobile"></icon-mobile>
               <a href="tel: +2449065195264"></a> +234 906 5195 264
             </li>
             <li>
-              <icon-location
-                :width="25"
-                :height="25"
-                iconName="location"
-              ></icon-location>
-              106 Victoria Street, Ojota, Lagos, Nigeria
+              <icon-location :width="25" :height="25" iconName="location"></icon-location>106 Victoria Street, Ojota, Lagos, Nigeria
             </li>
           </ul>
         </span>
         <div class="about-me__education">
-          <ul class="">
-            <li><strong>Eduaction</strong></li>
+          <ul class>
+            <li>
+              <strong>Eduaction</strong>
+            </li>
             <li>Kwame Nkruhma University of Science and Technology.</li>
             <li>BSc Information Technology</li>
             <br />
-            <li><strong>Certification</strong></li>
+            <li>
+              <strong>Certification</strong>
+            </li>
             <li>Introduction to Java Programming</li>
             <li>Triton College</li>
           </ul>

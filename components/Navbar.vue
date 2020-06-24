@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="">
+      <a class="navbar-item" href>
         <img src="@/assets/images/logo.png" width="112" height="28" />
       </a>
 
@@ -21,9 +21,13 @@
 
     <div id="portfolioNavbar" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" @click.prevent="collapse()" v-for="(navItem, i) in navItems" :key="i" v-scroll-to="`#${navItem.id}`">
-          {{navItem.name}}
-        </a>
+        <a
+          class="navbar-item"
+          @click.prevent="collapse()"
+          v-for="(navItem, i) in navItems"
+          :key="i"
+          v-scroll-to="`#${navItem.id}`"
+        >{{navItem.name}}</a>
       </div>
 
       <div class="navbar-end">
@@ -39,7 +43,7 @@
               <icon-linkedin :width="17.73" :height="17.73" iconName="linkedin"></icon-linkedin>
             </a>
             <a target="_blank" href="https://github.com/phemmyadot">
-             <icon-github :width="17.73" :height="17.73" iconName="github"></icon-github>
+              <icon-github :width="17.73" :height="17.73" iconName="github"></icon-github>
             </a>
             <a>
               <icon-youtube :width="17.73" :height="17.73" iconName="youtube"></icon-youtube>
@@ -53,7 +57,13 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { IconWhatsapp, IconTwitter, IconLinkedin, IconGithub, IconYoutube } from "@/components/icons";
+import {
+  IconWhatsapp,
+  IconTwitter,
+  IconLinkedin,
+  IconGithub,
+  IconYoutube
+} from "@/components/icons";
 
 @Component({
   components: {
@@ -75,12 +85,12 @@ export default class NavBar extends Vue {
   }
 
   navItems = [
-    {id: 'header', name: 'Home'},
-    {id: 'aboutMe', name: 'About Me'},
-    {id: 'services', name: 'Services'},
-    {id: 'projects', name: 'Projects'},
-    {id: 'contactMe', name: 'Contact me'},
-  ]
+    { id: "header", name: "Home" },
+    { id: "aboutMe", name: "About Me" },
+    { id: "services", name: "Services" },
+    { id: "projects", name: "Projects" },
+    { id: "contactMe", name: "Contact me" }
+  ];
 }
 </script>
 <style lang="scss" scoped>
