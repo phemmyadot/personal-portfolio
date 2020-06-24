@@ -769,6 +769,6 @@ export default class IconService extends Vue {
     margin: 0.3rem;
 }
 .icon {
-  fill: var(--bg);
+  fill: var(--bg-secondary);
 }
 </style>
