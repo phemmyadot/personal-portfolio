@@ -108,10 +108,18 @@ export default class NavBar extends Vue {
   }
 }
 .navbar {
-  box-shadow: var(--color-primary) 1px 1px 1px;
+  box-shadow: var(--box-shadow);
   position: fixed;
   width: 100%;
-  background: var(--bg);
+  background-color: var(--bg);
+}
+.navbar-menu {
+  background-color: var(--bg);
+}
+.navbar-burger {
+  .span {
+    color: var(--color-primary)
+  }
 }
 @include media-sm {
   .expand {
