@@ -1,9 +1,11 @@
 <template>
   <section class="skills section">
-    <h1 class="title">Skills</h1>
-    <div class="skills__icons">
-      <div class="skills__icons__icon" v-for="(tech, i) in skills" :key="i">
-        <img :src="require(`@/assets/images/${tech}.svg`)" :alt="tech" />
+    <div class="container">
+      <h1 class="title">Skills</h1>
+      <div class="skills__icons">
+        <div class="skills__icons__icon" v-for="(tech, i) in skills" :key="i">
+          <img :src="require(`@/assets/images/${tech}.svg`)" :alt="tech" />
+        </div>
       </div>
     </div>
   </section>
@@ -50,7 +52,7 @@ export default class Skills extends Vue {
     &__icon {
       flex-basis: 8%;
       height: 4rem;
-      margin: 1rem;
+      margin: 0 1rem;
       display: flex;
       justify-content: center;
       img {
