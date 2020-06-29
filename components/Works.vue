@@ -2,14 +2,19 @@
   <section class="container works section" id="services">
     <h1 class="title">My works</h1>
     <div class="works__cards">
-      <div class="card works__cards__card" v-for="(project, i) in works" :key="i" :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }">
-        <div class="works__cards__card__title">
-          <h2>{{project.title}}</h2>
+      <a target="_blank" v-for="(project, i) in works" :key="i" :href="project.link">
+        <div
+          class="card works__cards__card"
+          :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }"
+        >
+          <div class="works__cards__card__title">
+            <h2>{{project.title}}</h2>
+          </div>
+          <div class="card-content works__cards__card__content">
+            <p class="works__cards__card__content__description">{{project.description}}</p>
+          </div>
         </div>
-        <div class="card-content works__cards__card__content">
-          <p class="works__cards__card__content__description">{{project.description}}</p>
-        </div>
-      </div>
+      </a>
     </div>
   </section>
 </template>
@@ -20,10 +25,36 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class Services extends Vue {
   works = [
-    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
-    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
-    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
-    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
+    {
+      title: "Personal Portfolio",
+      description: "testing my description",
+      id: "project-1",
+      link: "http://google.com"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "testing my description",
+      id: "project-1",
+      link: "http://google.com"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "testing my description",
+      id: "project-1",
+      link: "http://google.com"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "testing my description",
+      id: "project-1",
+      link: "http://google.com"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "testing my description",
+      id: "project-1",
+      link: "http://google.com"
+    }
   ];
 }
 </script>
@@ -40,23 +71,26 @@ export default class Services extends Vue {
       min-height: 20rem;
       background-size: cover;
       background-position: center;
+      &:hover {
+        transform: scale(1.01);
+      }
       &__title {
-          height: 4rem;
-          background: var(--bg);
-          opacity: 0.9;
-          padding: 1.5rem;
-          color: var(--color-primary);
-          font-size: 1.5rem;
-          font-family: "latoBold";
-          display: flex;
-          align-items: center;
+        height: 4rem;
+        background: var(--bg);
+        opacity: 0.9;
+        padding: 1.5rem;
+        color: var(--color-primary);
+        font-size: 1.5rem;
+        font-family: "latoBold";
+        display: flex;
+        align-items: center;
       }
       &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-       position: absolute;
-    bottom: 0;
+        position: absolute;
+        bottom: 0;
         &__description {
           color: var(--color-primary);
           font-size: 1rem;
