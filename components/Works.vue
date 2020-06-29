@@ -2,7 +2,7 @@
   <section class="container works section" id="services">
     <h1 class="title">My works</h1>
     <div class="works__cards">
-      <div class="card works__cards__card" v-for="(project, i) in works" :key="i">
+      <div class="card works__cards__card" v-for="(project, i) in works" :key="i" :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }">
         <div class="works__cards__card__title">
           <h2>{{project.title}}</h2>
         </div>
@@ -20,10 +20,10 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class Services extends Vue {
   works = [
-    { title: "Personal Portfolio", description: "testing my description" },
-    { title: "Personal Portfolio", description: "testing my description" },
-    { title: "Personal Portfolio", description: "testing my description" },
-    { title: "Personal Portfolio", description: "testing my description" },
+    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
+    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
+    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
+    { title: "Personal Portfolio", description: "testing my description", id: 'project-1' },
   ];
 }
 </script>
@@ -38,12 +38,6 @@ export default class Services extends Vue {
     &__card {
       box-shadow: var(--box-shadow);
       min-height: 20rem;
-      background-image: linear-gradient(
-          to bottom,
-          var(--gradient-start-color),
-          var(--gradient-end-color)
-        ),
-        url("./../assets/images/project-1.png");
       background-size: cover;
       background-position: center;
       &__title {
