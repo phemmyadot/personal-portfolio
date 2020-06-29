@@ -39,14 +39,6 @@
           </ul>
         </div>
       </div>
-      <div class="technologies">
-        <strong>Technologies</strong>
-        <div class="technologies__icons">
-          <div class="technologies__icons__icon" v-for="(tech, i) in technologies" :key="i">
-            <img :src="require(`@/assets/images/${tech}.svg`)" :alt="tech" />
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -70,31 +62,6 @@ export default class AboutMe extends Vue {
           <strong>enthusiastic team player</strong>,
           <strong>creative thinker</strong> and a
           <strong>pragmatic problem solver.</strong>`;
-  technologies = [
-    "javascript",
-    "typescript",
-    "angular",
-    "vue-js",
-    "nuxt",
-    "ionic",
-    "nodejs",
-    "graphql",
-    "mongodb",
-    "html-5",
-    "css3",
-    "graphql",
-    "sass",
-    "bootstrap",
-    "material-ui",
-    "bulma",
-    "npm",
-    "git",
-    "github",
-    "bitbucket",
-    "azure",
-    "netlify",
-    "heroku"
-  ];
 }
 </script>
 <style lang="scss">
@@ -129,23 +96,6 @@ strong {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
 }
-.technologies {
-  margin-top: 1rem;
-  &__icons {
-    display: flex;
-    flex-wrap: wrap;
-    &__icon {
-      flex-basis: 8%;
-      height: 4rem;
-      margin: 1rem;
-      display: flex;
-      justify-content: center;
-      img {
-        height: 100%;
-      }
-    }
-  }
-}
 
 @include media-sm {
   .about-me {
@@ -170,15 +120,6 @@ strong {
     }
     &__education {
       margin-top: 1rem;
-    }
-  }
-  .technologies {
-    &__icons {
-      display: flex;
-      flex-wrap: wrap;
-      &__icon {
-        height: 2rem;
-      }
     }
   }
 }
