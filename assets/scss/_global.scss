@@ -48,6 +48,8 @@ strong {
   --bg-secondary: #091a28;
   --border-color: #ddd;
   --box-shadow: 0px 0px 17px -6px rgba(9, 26, 40, 0.15);
+  --gradient-start-color: #f3f5f473;
+  --gradient-end-color: #f3f5f4c7;
 }
 
 .dark-mode {
@@ -58,6 +60,8 @@ strong {
   --bg-secondary: #f3f5f4;
   --border-color: #0d2538;
   --box-shadow: 0px 0px 17px -7px rgba(243, 245, 244, 1);
+  --gradient-start-color: #091a284f;
+  --gradient-end-color: #091a28a6;
 }
 
 body {
