@@ -88,7 +88,6 @@ export default class Header extends Vue {
           background-color: var(--color-primary);
           border-color: transparent;
           color: var(--color-secondary);
-          border-radius: 10%;
           &:hover,
           &:focus {
             color: var(--color-secondary);

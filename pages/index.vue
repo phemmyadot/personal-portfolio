@@ -21,14 +21,15 @@
     <app-header></app-header>
     <app-about-me></app-about-me>
     <!-- <app-services></app-services> -->
-    <app-skills></app-skills>
+    <!-- <app-skills></app-skills> -->
     <app-works></app-works>
+    <app-contact></app-contact>
   </section>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { NavBar, Header, Services, AboutMe, Works, Skills } from "@/components";
+import { NavBar, Header, Services, AboutMe, Works, Skills, Contact } from "@/components";
 import { IconSetting, IconDay, IconNight } from "@/components/icons";
 import "reflect-metadata";
 
@@ -39,6 +40,7 @@ import "reflect-metadata";
     appServices: Services,
     appAboutMe: AboutMe,
     appSkills: Skills,
+    appContact: Contact,
     appWorks: Works,
     iconSetting: IconSetting,
     iconDay: IconDay,

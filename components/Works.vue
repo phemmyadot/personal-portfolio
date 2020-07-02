@@ -1,20 +1,22 @@
 <template>
-  <section class="container works section" id="services">
-    <h1 class="title">My works</h1>
-    <div class="works__cards">
-      <a target="_blank" v-for="(project, i) in works" :key="i" :href="project.link">
-        <div
-          class="card works__cards__card"
-          :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }"
-        >
-          <div class="works__cards__card__title">
-            <h2>{{project.title}}</h2>
+  <section class="works section" id="services">
+    <div class="container">
+      <h1 class="title">My works</h1>
+      <div class="works__cards">
+        <a target="_blank" v-for="(project, i) in works" :key="i" :href="project.link">
+          <div
+            class="card works__cards__card"
+            :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }"
+          >
+            <div class="works__cards__card__title">
+              <h2>{{project.title}}</h2>
+            </div>
+            <div class="card-content works__cards__card__content">
+              <p class="works__cards__card__content__description">{{project.description}}</p>
+            </div>
           </div>
-          <div class="card-content works__cards__card__content">
-            <p class="works__cards__card__content__description">{{project.description}}</p>
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </section>
 </template>
