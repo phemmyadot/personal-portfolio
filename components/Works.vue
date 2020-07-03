@@ -3,19 +3,30 @@
     <div class="container">
       <h1 class="title">My works</h1>
       <div class="works__cards">
-        <a target="_blank" v-for="(project, i) in works" :key="i" :href="project.link">
-          <div
-            class="card works__cards__card"
-            :style="{ backgroundImage: `linear-gradient(to bottom, var(--gradient-start-color), var(--gradient-end-color)), url('${require(`@/assets/images/${project.id}.png`)}')` }"
-          >
-            <div class="works__cards__card__title">
-              <h2>{{project.title}}</h2>
+        <div class="card works__cards__card" v-for="(project, i) in works" :key="i">
+          <div class="works__cards__card__actions">
+            <div class="works__cards__card__actions__action" v-if="project.repo !== ''">
+              <a target="_blank" :href="project.repo">
+                <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
+              </a>
             </div>
-            <div class="card-content works__cards__card__content">
-              <p class="works__cards__card__content__description">{{project.description}}</p>
+            <div class="works__cards__card__actions__action" v-if="project.link !== ''">
+              <a target="_blank" :href="project.link">
+                <icon-external :width="36" :height="36" iconName="external" type="inverse"></icon-external>
+              </a>
             </div>
           </div>
-        </a>
+          <div class="works__cards__card__content">
+            <h1 class="works__cards__card__content__title">{{project.title}}</h1>
+          </div>
+          <div class="works__cards__card__footer">
+            <p
+              class="works__cards__card__footer__tech"
+              v-for="(tech,i) in project.techs"
+              :key="i"
+            >{{tech}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -23,39 +34,51 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
+import { IconGithub, IconExternal } from "@/components/icons";
 
-@Component
+@Component({
+  components: {
+    iconGithub: IconGithub,
+    iconExternal: IconExternal
+  }
+})
 export default class Services extends Vue {
   works = [
     {
-      title: "Personal Portfolio",
-      description: "testing my description",
-      id: "project-1",
-      link: "http://google.com"
+      title: "Recipe APP",
+      link: "https://phissy-recipe-app.netlify.com/",
+      repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
+      techs: ["IONIC", "NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"]
+    },
+    {
+      title: "Roster APP",
+      link: "",
+      repo: "https://github.com/phemmyadot/RosterApp",
+      techs: ["ANGULAR", "HTML/CSS", "ASP.NET API"]
+    },
+    {
+      title: "Richtext Editor",
+      link: "phemmy-richtext-editor.netlify.app",
+      repo: "https://github.com/phemmyadot/Rich-Text-Editor-JavaScript-",
+      techs: ["HTML/CSS", "JAVASCRIPT"]
+    },
+    {
+      title: "Recipe Blog",
+      link: "https://cooking-app-e6bc4.firebaseapp.com/",
+      repo: "https://github.com/phemmyadot/phissy-frontend-angular",
+      techs: ["HTML/CSS", "JAVASCRIPT"]
+    },
+    {
+      title: "Inventory APP",
+      link: "https://phemmy-inverntory-app.netlify.app/",
+      repo: "https://github.com/phemmyadot/inventory-app",
+      techs: ["HTML/CSS", "JAVASCRIPT"]
     },
     {
       title: "Personal Portfolio",
-      description: "testing my description",
-      id: "project-1",
-      link: "http://google.com"
-    },
-    {
-      title: "Personal Portfolio",
-      description: "testing my description",
-      id: "project-1",
-      link: "http://google.com"
-    },
-    {
-      title: "Personal Portfolio",
-      description: "testing my description",
-      id: "project-1",
-      link: "http://google.com"
-    },
-    {
-      title: "Personal Portfolio",
-      description: "testing my description",
-      id: "project-1",
-      link: "http://google.com"
+      link: "https://babafemi-portfolio.netlify.app/",
+      repo: "https://github.com/phemmyadot/personal-portfolio",
+      techs: ["VUE.JS"]
     }
   ];
 }
@@ -65,37 +88,49 @@ export default class Services extends Vue {
 .works {
   &__cards {
     display: grid;
-    grid-column-gap: 2rem;
+    grid-column-gap: 4rem;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 2rem;
     &__card {
       box-shadow: var(--box-shadow);
       min-height: 20rem;
-      background-size: cover;
-      background-position: center;
+      background-color: var(--bg-secondary);
+      padding: 4rem 5rem;
       &:hover {
         transform: scale(1.01);
       }
-      &__title {
-        height: 4rem;
-        background: var(--bg);
+      &__actions {
+        margin-bottom: 1.5rem;
         opacity: 0.9;
-        padding: 1.5rem;
-        color: var(--color-primary);
+        color: var(--color-secondary);
         font-size: 1.5rem;
         font-family: "latoBold";
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        &__action {
+          margin: 0 0.5rem;
+        }
       }
       &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        position: absolute;
         bottom: 0;
-        &__description {
-          color: var(--color-primary);
+        margin-top: 5rem;
+        &__title {
+          color: var(--color-secondary) !important;
+          font-size: 2rem;
+        }
+      }
+      &__footer {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        &__tech {
+          color: var(--color-secondary) !important;
           font-size: 1rem;
+          margin-right: 0.5rem;
         }
       }
     }
