@@ -70,7 +70,7 @@ export default class Services extends Vue {
     },
     {
       title: "Inventory APP",
-      link: "https://phemmy-inverntory-app.netlify.app/",
+      link: "https://phemmy-inventory-app.netlify.app/",
       repo: "https://github.com/phemmyadot/inventory-app",
       techs: ["HTML/CSS", "JAVASCRIPT"]
     },
