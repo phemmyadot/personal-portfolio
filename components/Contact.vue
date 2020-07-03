@@ -5,7 +5,7 @@
       <div class="contact">
         <div class="contact__form">
           <div class="control has-icons-left has-icons-right contact__form__input">
-            <input class="input" type="email" placeholder="Email" />
+            <input class="input" type="email" placeholder="Email" v-model="from_email"/>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -14,7 +14,7 @@
             </span>
           </div>
           <div class="control has-icons-left has-icons-right contact__form__input">
-            <input class="input" type="name" placeholder="Full Name" />
+            <input class="input" type="name" placeholder="Full Name" v-model="from_name" />
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -23,18 +23,14 @@
             </span>
           </div>
           <div class="control contact__form__textarea">
-            <textarea class="textarea" placeholder="message"></textarea>
+            <textarea class="textarea" placeholder="Message" v-model="message"></textarea>
           </div>
           <div class="contact__form__download-button">
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/u/1/d/1LYf0KKGmDTzD6NoWCY7ljn-3Ug72VGtm/view?usp=drive_open"
-            >
-              <button
-                id="download"
-                class="contact__form__download-button__button button is-rounded"
-              >Send</button>
-            </a>
+            <button
+              id="download"
+              class="contact__form__download-button__button button is-rounded"
+              @click="sendMail"
+            >Send</button>
           </div>
         </div>
         <span class="contact__details">
@@ -61,6 +57,8 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 import { IconMail, IconMobile, IconLocation } from "@/components/icons";
+import axios from "axios";
+import emailjs from "emailjs-com";
 
 @Component({
   components: {
@@ -69,7 +67,26 @@ import { IconMail, IconMobile, IconLocation } from "@/components/icons";
     iconLocation: IconLocation
   }
 })
-export default class Contact extends Vue {}
+export default class Contact extends Vue {
+  from_name = '';
+  from_email = '';
+  message = '';
+  sendMail() {
+    const templateParams = {
+      from_name: this.from_name,
+      from_email: this.from_email,
+      message_html: `<div>${this.message}</div>`
+    };
+    emailjs.send("babafemi-portfolio", "template_VAKqVYIq", templateParams, 'user_XlAztwVmk5k6747vKi3qX').then(
+      function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function(error) {
+        console.log("FAILED...", error);
+      }
+    );
+  }
+}
 </script>
 
 <style lang="scss" scoped>
