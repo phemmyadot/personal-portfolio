@@ -42,7 +42,7 @@
             </li>
             <li>
               <icon-mobile :width="25" :height="25" iconName="mobile"></icon-mobile>
-              <a href="tel: +2449065195264"></a> +234 906 5195 264
+              <a href="tel:+2349065195264"></a> +234 906 5195 264
             </li>
             <li>
               <icon-location :width="25" :height="25" iconName="location"></icon-location>106 Victoria Street, Ojota, Lagos, Nigeria
