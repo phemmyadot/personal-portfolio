@@ -5,7 +5,7 @@
       <div class="contact">
         <div class="contact__form">
           <div class="control has-icons-left has-icons-right contact__form__input">
-            <input class="input" type="email" placeholder="Email" v-model="from_email"/>
+            <input class="input" type="email" placeholder="Email" v-model="from_email" @keyup="validateEmail" :style="{borderColor: !emailTouched ? '' : emailErrors.length > 0 ? 'red' : 'green'}"/>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -14,7 +14,7 @@
             </span>
           </div>
           <div class="control has-icons-left has-icons-right contact__form__input">
-            <input class="input" type="name" placeholder="Full Name" v-model="from_name" />
+            <input class="input" type="name" placeholder="Full Name" v-model="from_name" @keyup="validateName" :style="{borderColor: !nameTouched ? '' : nameErrors.length > 0 ? 'red' : 'green'}"/>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -23,14 +23,18 @@
             </span>
           </div>
           <div class="control contact__form__textarea">
-            <textarea class="textarea" placeholder="Message" v-model="message"></textarea>
+            <textarea class="textarea" placeholder="Message" v-model="message" @keyup="validateMessage" :style="{borderColor: !messageTouched ? '' : messageErrors.length > 0 ? 'red' : 'green'}" ></textarea>
           </div>
           <div class="contact__form__download-button">
             <button
+              :disabled="emailErrors.length > 0 || nameErrors.length > 0 || emailErrors.length > 0"
               id="download"
               class="contact__form__download-button__button button is-rounded"
               @click="sendMail"
             >Send</button>
+          </div>
+          <div class="contact__form__response">
+            <p>{{responseMessage}}</p>
           </div>
         </div>
         <span class="contact__details">
@@ -68,23 +72,72 @@ import emailjs from "emailjs-com";
   }
 })
 export default class Contact extends Vue {
-  from_name = '';
-  from_email = '';
-  message = '';
+  from_name = "";
+  from_email = "";
+  message = "";
+  responseMessage = "";
+  emailErrors = [];
+  emailTouched = false;
+  nameErrors = [];
+  nameTouched = false;
+  messageErrors = [];
+  messageTouched = false;
+
+  validateEmail() {
+    this.emailTouched = true;
+    this.emailErrors = [];
+    var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!this.from_email) {
+      this.emailErrors.push("Email required.");
+    }
+    if (!regex.test(this.from_email)) {
+      this.emailErrors.push("Valid email required.");
+    };
+  }
+
+  validateName() {
+    this.nameTouched = true;
+    this.nameErrors = [];
+    if (!this.from_name) {
+      this.nameErrors.push("Name required.");
+    }
+  }
+
+  validateMessage() {
+    this.messageTouched = true;
+    this.messageErrors = [];
+    if (!this.message) {
+      this.messageErrors.push("Message required.");
+    }
+  }
+
   sendMail() {
     const templateParams = {
       from_name: this.from_name,
       from_email: this.from_email,
       message_html: `<div>${this.message}</div>`
     };
-    emailjs.send("babafemi-portfolio", "template_VAKqVYIq", templateParams, 'user_XlAztwVmk5k6747vKi3qX').then(
-      function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      function(error) {
-        console.log("FAILED...", error);
-      }
-    );
+    emailjs
+      .send(
+        "babafemi-portfolio",
+        "template_VAKqVYIq",
+        templateParams,
+        "user_XlAztwVmk5k6747vKi3qX"
+      )
+      .then(
+        response => {
+          this.from_name = "";
+          this.from_email = "";
+          this.message = "";
+          this.responseMessage = "SENT!";
+          setTimeout(() => (this.responseMessage = ""), 1000);
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        error => {
+          this.responseMessage = "FAILED! TRY AGAIN";
+          console.log("FAILED...", error);
+        }
+      );
   }
 }
 </script>
@@ -132,6 +185,11 @@ export default class Contact extends Vue {
         &:focus {
           color: var(--color-secondary);
         }
+      }
+    }
+    &__response {
+      p {
+        text-align: center;
       }
     }
   }
