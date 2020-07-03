@@ -27,7 +27,7 @@
           </div>
           <div class="contact__form__download-button">
             <button
-              :disabled="emailErrors.length > 0 || nameErrors.length > 0 || emailErrors.length > 0"
+              :disabled="emailErrors.length > 0 || nameErrors.length > 0 || emailErrors.length > 0 || from_name ==='' || from_email === '' || message === ''"
               id="download"
               class="contact__form__download-button__button button is-rounded"
               @click="sendMail"
