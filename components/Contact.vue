@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" id="contact">
     <div class="container">
       <h1 class="title">Get in touch</h1>
       <div class="contact">
@@ -202,7 +202,7 @@ export default class Contact extends Vue {
   .contact {
      display: block;
      &__details {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
      }
   }
 }
@@ -211,7 +211,7 @@ export default class Contact extends Vue {
   .contact {
      display: block;
      &__details {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
      }
 
   }
