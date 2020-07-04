@@ -197,4 +197,17 @@ export default class Contact extends Vue {
     flex-basis: 49%;
   }
 }
+
+@include media-sm {
+  .contact {
+     display: block;
+  }
+}
+
+@include media-xs {
+  .contact {
+     display: block;
+  }
+}
+
 </style>
