@@ -1,7 +1,7 @@
 <template>
   <section class="works section" id="works">
     <div class="container">
-      <h1 class="title">My works</h1>
+      <h1 class="title">Projects I have worked on</h1>
       <div class="works__cards">
         <div class="card works__cards__card" v-for="(project, i) in works" :key="i">
           <div class="works__cards__card__actions">
