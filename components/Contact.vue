@@ -39,7 +39,7 @@
         </div>
         <span class="contact__details">
           <ul class="contact__details__lists">
-            <strong>Contact:</strong>
+            <strong>Contact info:</strong>
             <li>
               <icon-mail :width="25" :height="25" iconName="mail"></icon-mail>
               <a href="mailto:Phemmylekan@gmail.com">Phemmylekan@gmail.com</a>
