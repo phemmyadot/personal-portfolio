@@ -201,12 +201,19 @@ export default class Contact extends Vue {
 @include media-sm {
   .contact {
      display: block;
+     &__details {
+        margin-top: 1rem;
+     }
   }
 }
 
 @include media-xs {
   .contact {
      display: block;
+     &__details {
+        margin-top: 1rem;
+     }
+
   }
 }
 
