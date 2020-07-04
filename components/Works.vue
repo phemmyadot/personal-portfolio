@@ -48,7 +48,7 @@ export default class Services extends Vue {
       title: "Recipe APP",
       link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
-      techs: ["IONIC", "NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"]
+      techs: ["IONIC", "NODE.JS", "HTML/CSS", "EXPRESS.JS", "GRAPHQL", "MONGODB"]
     },
     {
       title: "Roster APP",
@@ -72,13 +72,18 @@ export default class Services extends Vue {
       title: "Inventory APP",
       link: "https://phemmy-inventory-app.netlify.app/",
       repo: "https://github.com/phemmyadot/inventory-app",
-      techs: ["HTML/CSS", "JAVASCRIPT"]
+      techs: ["VUE.JS", "HTML/SCSS"]
     },
     {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
       repo: "https://github.com/phemmyadot/personal-portfolio",
-      techs: ["VUE.JS"]
+      techs: ["VUE.JS", "HTML/SCSS"]
+    } ,
+    {
+      title: "My Ivan Farm Stead",
+      link: "http://myivavfarmstead.com/",
+      techs: ["WORDPRESS"]
     }
   ];
 }
