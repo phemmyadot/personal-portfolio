@@ -86,10 +86,9 @@ export default class NavBar extends Vue {
 
   navItems = [
     { id: "header", name: "Home" },
-    { id: "aboutMe", name: "About Me" },
-    { id: "services", name: "Services" },
-    { id: "projects", name: "Projects" },
-    { id: "contactMe", name: "Contact me" }
+    { id: "aboutMe", name: "About" },
+    { id: "works", name: "Works" },
+    { id: "contact", name: "Contact" }
   ];
 }
 </script>
