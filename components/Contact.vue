@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" id="contact">
     <div class="container">
       <h1 class="title">Get in touch</h1>
       <div class="contact">
@@ -39,7 +39,7 @@
         </div>
         <span class="contact__details">
           <ul class="contact__details__lists">
-            <strong>Contact:</strong>
+            <strong>Contact info:</strong>
             <li>
               <icon-mail :width="25" :height="25" iconName="mail"></icon-mail>
               <a href="mailto:Phemmylekan@gmail.com">Phemmylekan@gmail.com</a>
@@ -197,4 +197,24 @@ export default class Contact extends Vue {
     flex-basis: 49%;
   }
 }
+
+@include media-sm {
+  .contact {
+     display: block;
+     &__form {
+        margin-bottom: 1rem;
+     }
+  }
+}
+
+@include media-xs {
+  .contact {
+     display: block;
+     .contact__form {
+        margin-bottom: 1rem;
+     }
+
+  }
+}
+
 </style>
