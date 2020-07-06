@@ -2,8 +2,21 @@
   <section class="works section" id="services">
     <div class="container">
       <h1 class="title">My works</h1>
+      <div class="tabs is-boxed">
+        <ul>
+          <li
+            :class="currentCategory === category? 'is-active' : ''"
+            v-for="(category, i) in categories"
+            :key="i"
+          >
+            <a @click.prevent="changeCategory(category)">
+              <span>{{category}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="works__cards">
-        <div class="card works__cards__card" v-for="(project, i) in works" :key="i">
+        <div class="card works__cards__card" v-for="(project, i) in filteredWorks" :key="i">
           <div class="works__cards__card__actions">
             <div class="works__cards__card__actions__action" v-if="project.repo !== ''">
               <a target="_blank" :href="project.repo">
@@ -48,39 +61,71 @@ export default class Services extends Vue {
       title: "Recipe APP",
       link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
-      techs: ["IONIC", "NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"]
+      techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
+      category: "Web"
+    },
+    {
+      title: "Recipe APP",
+      link: "https://phissy-recipe-app.netlify.com/",
+      repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
+      techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
+      category: "Api"
     },
     {
       title: "Roster APP",
       link: "",
       repo: "https://github.com/phemmyadot/RosterApp",
-      techs: ["ANGULAR", "HTML/CSS", "ASP.NET API"]
+      techs: ["ANGULAR", "HTML/CSS"],
+      category: "Web"
     },
     {
       title: "Richtext Editor",
       link: "phemmy-richtext-editor.netlify.app",
       repo: "https://github.com/phemmyadot/Rich-Text-Editor-JavaScript-",
-      techs: ["HTML/CSS", "JAVASCRIPT"]
+      techs: ["HTML/CSS", "JAVASCRIPT"],
+      category: "Snippet"
     },
     {
       title: "Recipe Blog",
       link: "https://cooking-app-e6bc4.firebaseapp.com/",
       repo: "https://github.com/phemmyadot/phissy-frontend-angular",
-      techs: ["HTML/CSS", "JAVASCRIPT"]
+      techs: ["HTML/CSS", "JAVASCRIPT"],
+      category: "Web"
     },
     {
       title: "Inventory APP",
       link: "https://phemmy-inventory-app.netlify.app/",
       repo: "https://github.com/phemmyadot/inventory-app",
-      techs: ["HTML/CSS", "JAVASCRIPT"]
+      techs: ["HTML/CSS", "JAVASCRIPT"],
+      category: "Web"
     },
     {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
       repo: "https://github.com/phemmyadot/personal-portfolio",
-      techs: ["VUE.JS"]
+      techs: ["VUE.JS"],
+      category: "Web"
     }
   ];
+
+  categories: string[] = [];
+  filteredWorks = [];
+  currentCategory = "All";
+
+  created() {
+    const allCategories = this.works.map(w => w.category);
+    this.categories = [...["All"], ...new Set(allCategories)];
+    this.filteredWorks = this.works;
+  }
+
+  changeCategory(category) {
+    this.currentCategory = category;
+    if (category === "All") {
+      this.filteredWorks = this.works;
+    } else {
+      this.filteredWorks = this.works.filter(w => w.category === category);
+    }
+  }
 }
 </script>
 
@@ -137,6 +182,15 @@ export default class Services extends Vue {
   }
 }
 
+.is-active {
+  a {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--bg-secondary) !important;
+    span {
+      color: var(--color-secondary) !important;
+    }
+  }
+}
 @include media-sm {
   .works {
     &__cards {
