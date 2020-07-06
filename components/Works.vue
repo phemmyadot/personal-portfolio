@@ -80,7 +80,7 @@ export default class Services extends Vue {
     },
     {
       title: "Richtext Editor",
-      link: "phemmy-richtext-editor.netlify.app",
+      link: "https://codepen.io/phemmyadot/pen/Yzwebzx",
       repo: "https://github.com/phemmyadot/Rich-Text-Editor-JavaScript-",
       techs: ["HTML/CSS", "JAVASCRIPT"],
       category: "Snippet"
