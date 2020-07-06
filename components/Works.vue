@@ -62,7 +62,7 @@ export default class Services extends Vue {
       link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
       techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
-      category: "Web"
+      category: "Mobile/Web"
     },
     {
       title: "Recipe APP",
