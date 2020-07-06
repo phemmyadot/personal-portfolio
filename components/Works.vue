@@ -89,21 +89,27 @@ export default class Services extends Vue {
       title: "Recipe Blog",
       link: "https://cooking-app-e6bc4.firebaseapp.com/",
       repo: "https://github.com/phemmyadot/phissy-frontend-angular",
-      techs: ["HTML/CSS", "JAVASCRIPT"],
+      techs: ["HTML/CSS", "ANGULAR"],
       category: "Web"
     },
     {
       title: "Inventory APP",
       link: "https://phemmy-inventory-app.netlify.app/",
       repo: "https://github.com/phemmyadot/inventory-app",
-      techs: ["HTML/CSS", "JAVASCRIPT"],
+      techs: ["HTML/SCSS", "VUE.JS"],
       category: "Web"
     },
     {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
       repo: "https://github.com/phemmyadot/personal-portfolio",
-      techs: ["VUE.JS"],
+      techs: ["VUE.JS", "HTML/SCSS"],
+      category: "Web"
+    } ,
+    {
+      title: "My Ivav Farmstead",
+      link: "http://myivavfarmstead.com/",
+      techs: ["WORDPRESS"],
       category: "Web"
     }
   ];
