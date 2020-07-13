@@ -65,8 +65,8 @@ export default class Services extends Vue {
       category: "Mobile/Web"
     },
     {
-      title: "Recipe APP",
-      link: "https://phissy-recipe-app.netlify.com/",
+      title: "Recipe APP API",
+      // link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
       techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
       category: "Api"
@@ -103,7 +103,7 @@ export default class Services extends Vue {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
       repo: "https://github.com/phemmyadot/personal-portfolio",
-      techs: ["VUE.JS", "HTML/SCSS"],
+      techs: ["NUXT.JS", "HTML/SCSS"],
       category: "Web"
     } ,
     {
