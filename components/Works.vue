@@ -100,6 +100,13 @@ export default class Services extends Vue {
       category: "Web"
     },
     {
+      title: "Inventory APP API",
+      // link: "https://phemmy-inventory-app.netlify.app/",
+      repo: "https://github.com/phemmyadot/inventory-app-backend",
+      techs: ["NODE.JS", "EXPRESS.JS", "MONGODB"],
+      category: "Api"
+    },
+    {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
       repo: "https://github.com/phemmyadot/personal-portfolio",
