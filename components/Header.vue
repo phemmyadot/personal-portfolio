@@ -20,7 +20,7 @@
         <div class="header__container__content__download-button">
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1H84lr5TDDH9Ko8H7LMwU2KFGyXTdheVh/view"
+            href="https://drive.google.com/file/d/1k2lRi7KV-ItVFreONi6I-hWEf-7ij3ZL/view?usp=drivesdk"
           >
             <button
               id="download"
