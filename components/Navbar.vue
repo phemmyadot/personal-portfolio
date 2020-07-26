@@ -45,9 +45,6 @@
             <a target="_blank" href="https://github.com/phemmyadot">
               <icon-github :width="17.73" :height="17.73" iconName="github"></icon-github>
             </a>
-            <a>
-              <icon-youtube :width="17.73" :height="17.73" iconName="youtube"></icon-youtube>
-            </a>
           </div>
         </div>
       </div>
@@ -61,8 +58,7 @@ import {
   IconWhatsapp,
   IconTwitter,
   IconLinkedin,
-  IconGithub,
-  IconYoutube
+  IconGithub
 } from "@/components/icons";
 
 @Component({
@@ -71,7 +67,6 @@ import {
     iconTwitter: IconTwitter,
     iconLinkedin: IconLinkedin,
     iconGithub: IconGithub,
-    iconYoutube: IconYoutube
   }
 })
 export default class NavBar extends Vue {
