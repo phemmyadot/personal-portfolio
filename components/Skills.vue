@@ -21,6 +21,7 @@ export default class Skills extends Vue {
     "angular",
     "vue-js",
     "nuxt",
+    "flutter",
     "ionic",
     "nodejs",
     "graphql",
