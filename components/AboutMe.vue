@@ -55,6 +55,7 @@ export default class AboutMe extends Vue {
     "angular",
     "vue-js",
     "nuxt",
+    "flutter",
     "ionic",
     "nodejs",
     "graphql",
