@@ -61,7 +61,7 @@ export default class Services extends Vue {
       title: "Movies Plus",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/movies-plus",
       repo: "https://github.com/phemmyadot/movies-plus",
-      techs: ["Flutter", "Dart"],
+      techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
     {
