@@ -57,6 +57,13 @@ import { IconGithub, IconExternal } from "@/components/icons";
 })
 export default class Services extends Vue {
   works = [
+  {
+      title: "Movies Plus",
+      link: "https://install.appcenter.ms/users/phemmyadot/apps/movies-plus",
+      repo: "https://github.com/phemmyadot/movies-plus",
+      techs: ["Flutter", "Dart"],
+      category: "Mobile"
+    },
     {
       title: "Recipe APP",
       link: "https://phissy-recipe-app.netlify.com/",
