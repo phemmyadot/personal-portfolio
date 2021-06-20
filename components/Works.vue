@@ -71,7 +71,7 @@ export default class Services extends Vue {
       repo: "https://github.com/phemmyadot/cook-book",
       techs: ["FLUTTER", "DART", "GOOGLE CLOUD PLATFORM"],
       category: "Mobile"
-    }
+    },
 
     {
       title: "Recipe APP",
