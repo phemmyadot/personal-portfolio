@@ -78,14 +78,14 @@ export default class Services extends Vue {
       link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
       techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
-      category: "Mobile/Web"
+      category: "Mobile"
     },
     {
       title: "Recipe APP API",
       // link: "https://phissy-recipe-app.netlify.com/",
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
       techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
-      category: "Api"
+      category: "Backend"
     },
     {
       title: "Roster APP",
@@ -120,7 +120,7 @@ export default class Services extends Vue {
       // link: "https://phemmy-inventory-app.netlify.app/",
       repo: "https://github.com/phemmyadot/inventory-app-backend",
       techs: ["NODE.JS", "EXPRESS.JS", "MONGODB"],
-      category: "Api"
+      category: "Backend"
     },
     {
       title: "Personal Portfolio",
