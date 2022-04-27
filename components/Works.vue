@@ -23,6 +23,11 @@
                 <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
               </a>
             </div>
+             <div class="works__cards__card__actions__action" v-else">
+              <a >
+                <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
+              </a>
+            </div>
             <div class="works__cards__card__actions__action" v-if="project.link !== ''">
               <a target="_blank" :href="project.link">
                 <icon-external :width="36" :height="36" iconName="external" type="inverse"></icon-external>
