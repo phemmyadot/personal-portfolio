@@ -113,13 +113,13 @@ export default class Services extends Vue {
       techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
       category: "Mobile"
     },
-    {
-      title: "Recipe APP API",
+ //   {
+   //   title: "Recipe APP API",
       // link: "https://phissy-recipe-app.netlify.com/",
-      repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
-      techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
-      category: "Backend"
-    },
+     // repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
+      //techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
+      //category: "Backend"
+    //},
     {
       title: "Roster APP",
       link: "",
@@ -148,13 +148,13 @@ export default class Services extends Vue {
       techs: ["HTML/SCSS", "VUE.JS"],
       category: "Web"
     },
-    {
-      title: "Inventory APP API",
+   // {
+     // title: "Inventory APP API",
       // link: "https://phemmy-inventory-app.netlify.app/",
-      repo: "https://github.com/phemmyadot/inventory-app-backend",
-      techs: ["NODE.JS", "EXPRESS.JS", "MONGODB"],
-      category: "Backend"
-    },
+    //  repo: "https://github.com/phemmyadot/inventory-app-backend",
+      //techs: ["NODE.JS", "EXPRESS.JS", "MONGODB"],
+     // category: "Backend"
+    //},
     {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
