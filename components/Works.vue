@@ -58,6 +58,34 @@ import { IconGithub, IconExternal } from "@/components/icons";
 export default class Services extends Vue {
   works = [
   {
+      title: "La Isla",
+      link: "",
+      repo: "",
+      techs: ["FLUTTER", "DART"],
+      category: "Mobile"
+    },
+     {
+      title: "Woo Cars",
+      link: "",
+      repo: "",
+      techs: ["FLUTTER", "DART"],
+      category: "Mobile"
+    },
+     {
+      title: "Younion",
+      link: "",
+      repo: "",
+      techs: ["FLUTTER", "DART"],
+      category: "Mobile"
+    },
+    {
+      title: "Dream House",
+      link: "",
+      repo: "",
+      techs: ["FLUTTER", "DART"],
+      category: "Mobile"
+    },
+  {
       title: "Movies Plus",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/movies-plus",
       repo: "https://github.com/phemmyadot/movies-plus",
