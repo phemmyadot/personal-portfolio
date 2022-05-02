@@ -27,7 +27,7 @@
               <a target="_blank" :href="project.link">
                 <icon-external :width="36" :height="36" iconName="external" type="inverse"></icon-external>
               </a>
-              <div v-if="project.repo == '' && project.link == ''" style="height: 36px;"> </div>
+              <div v-if="project.link == ''" style="height: 36px;"> </div>
             </div>
           </div>
           <div class="works__cards__card__content">
