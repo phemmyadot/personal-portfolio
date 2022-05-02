@@ -62,21 +62,21 @@ import { IconGithub, IconExternal } from "@/components/icons";
 })
 export default class Services extends Vue {
   works = [
-  {
+    {
       title: "La Isla",
       link: "",
       repo: "",
       techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
-     {
+    {
       title: "Woo Cars",
       link: "",
       repo: "",
       techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
-     {
+    {
       title: "Younion",
       link: "",
       repo: "",
@@ -90,15 +90,14 @@ export default class Services extends Vue {
       techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
-  {
+    {
       title: "Movies Plus",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/movies-plus",
       repo: "https://github.com/phemmyadot/movies-plus",
       techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
-
-  {
+    {
       title: "Recipie Book",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/recipiebook",
       repo: "https://github.com/phemmyadot/cook-book",
@@ -113,7 +112,6 @@ export default class Services extends Vue {
       techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
       category: "Mobile"
     },
- 
     {
       title: "Roster APP",
       link: "",
@@ -142,7 +140,6 @@ export default class Services extends Vue {
       techs: ["HTML/SCSS", "VUE.JS"],
       category: "Web"
     },
-   
     {
       title: "Personal Portfolio",
       link: "https://babafemi-portfolio.netlify.app/",
