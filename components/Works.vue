@@ -18,7 +18,7 @@
       <div class="works__cards">
         <div class="card works__cards__card" v-for="(project, i) in filteredWorks" :key="i">
           <div class="works__cards__card__actions">
-            <div class="works__cards__card__actions__action"">
+            <div class="works__cards__card__actions__action" v-if="project.repo !== ''">
               <a target="_blank" :href="project.repo">
                 <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
               </a>
@@ -27,6 +27,7 @@
               <a target="_blank" :href="project.link">
                 <icon-external :width="36" :height="36" iconName="external" type="inverse"></icon-external>
               </a>
+              <div v-if="project.repo == '' && project.link == ''" style="height: 36px;"> </div>
             </div>
           </div>
           <div class="works__cards__card__content">
@@ -57,15 +58,8 @@ import { IconGithub, IconExternal } from "@/components/icons";
 })
 export default class Services extends Vue {
   works = [
-    {
+  {
       title: "La Isla",
-      link: "",
-      repo: "",
-      techs: ["FLUTTER", "DART"],
-      category: "Mobile"
-    },
-    {
-      title: "Woo Cars",
       link: "",
       repo: "",
       techs: ["FLUTTER", "DART"],
@@ -86,13 +80,21 @@ export default class Services extends Vue {
       category: "Mobile"
     },
     {
+      title: "Woo Cars",
+      link: "",
+      repo: "",
+      techs: ["FLUTTER", "DART"],
+      category: "Mobile"
+    },
+  {
       title: "Movies Plus",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/movies-plus",
       repo: "https://github.com/phemmyadot/movies-plus",
       techs: ["FLUTTER", "DART"],
       category: "Mobile"
     },
-    {
+
+  {
       title: "Recipie Book",
       link: "https://install.appcenter.ms/users/phemmyadot/apps/recipiebook",
       repo: "https://github.com/phemmyadot/cook-book",
@@ -106,6 +108,13 @@ export default class Services extends Vue {
       repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
       techs: ["IONIC", "HTML/CSS", "GRAPHQL"],
       category: "Mobile"
+    },
+    {
+      title: "Recipe APP API",
+      // link: "https://phissy-recipe-app.netlify.com/",
+      repo: "https://github.com/phemmyadot/phissy-recipes-frontend-ionic",
+      techs: ["NODE.JS", "EXPRESS.JS", "GRAPHQL", "MONGODB"],
+      category: "Backend"
     },
     {
       title: "Roster APP",
@@ -134,6 +143,13 @@ export default class Services extends Vue {
       repo: "https://github.com/phemmyadot/inventory-app",
       techs: ["HTML/SCSS", "VUE.JS"],
       category: "Web"
+    },
+    {
+      title: "Inventory APP API",
+      // link: "https://phemmy-inventory-app.netlify.app/",
+      repo: "https://github.com/phemmyadot/inventory-app-backend",
+      techs: ["NODE.JS", "EXPRESS.JS", "MONGODB"],
+      category: "Backend"
     },
     {
       title: "Personal Portfolio",
