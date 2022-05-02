@@ -18,13 +18,8 @@
       <div class="works__cards">
         <div class="card works__cards__card" v-for="(project, i) in filteredWorks" :key="i">
           <div class="works__cards__card__actions">
-            <div class="works__cards__card__actions__action" v-if="project.repo !== ''">
+            <div class="works__cards__card__actions__action"">
               <a target="_blank" :href="project.repo">
-                <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
-              </a>
-            </div>
-             <div class="works__cards__card__actions__action" v-else">
-              <a >
                 <icon-github :width="36" :height="36" iconName="github" type="inverse"></icon-github>
               </a>
             </div>
