@@ -42,14 +42,14 @@
             <strong>Contact info:</strong>
             <li>
               <icon-mail :width="25" :height="25" iconName="mail"></icon-mail>
-              <a href="mailto:Phemmylekan@gmail.com">Phemmylekan@gmail.com</a>
+              <a href="mailto:Phemmylekan@gmail.com">babafemiadojutelegan@gmail.com</a>
             </li>
             <li>
               <icon-mobile :width="25" :height="25" iconName="mobile"></icon-mobile>
-              <a href="tel:+2349065195264"></a> +234 906 5195 264
+              <a href="tel:(773) 641-2696"></a> +234 906 5195 264
             </li>
             <li>
-              <icon-location :width="25" :height="25" iconName="location"></icon-location>106 Victoria Street, Ojota, Lagos, Nigeria
+              <icon-location :width="25" :height="25" iconName="location"></icon-location>5639 N. Central Ave, Chicago, IL, 60646
             </li>
           </ul>
         </span>
