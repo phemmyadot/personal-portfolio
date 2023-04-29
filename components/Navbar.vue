@@ -33,12 +33,6 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a target="_blank" href="https://wa.me/+2349065195264">
-              <icon-whatsapp :width="17.73" :height="17.73" iconName="whatsapp"></icon-whatsapp>
-            </a>
-            <a target="_blank" href="https://twitter.com/femiadot">
-              <icon-twitter :width="17.73" :height="17.73" iconName="twitter"></icon-twitter>
-            </a>
             <a target="_blank" href="https://www.linkedin.com/in/babafemi-adojutelegan/">
               <icon-linkedin :width="17.73" :height="17.73" iconName="linkedin"></icon-linkedin>
             </a>
