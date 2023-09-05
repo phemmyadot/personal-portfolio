@@ -39,7 +39,13 @@ export default class Skills extends Vue {
     "bitbucket",
     "azure",
     "netlify",
-    "heroku"
+    "heroku",
+    "python",
+    "aws",
+    "gcp"
+    "docker",
+    "ansible",
+    "terraform",
   ];
 }
 </script>
